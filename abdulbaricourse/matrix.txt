@@ -1,0 +1,14 @@
+Diagonal mat: non Diagonal elms  should be zeros .
+M[i][j]=0 : i!=j
+
+Lower triangular matrix : when the lower part of the matrix is non zeros and rest of them are zeros.
+M[i][j]=0 : i<j.
+M[i][j]=x : i>=j.
+non zeros elms: n(n+1)/2
+zeros = n^2 - n(n+1)/2 = n(n-1)/2
+ non zeros > zeros.
+
+
+
+Sysmetrix mat: M[i][j]=M[j][i].
+    `  

@@ -1,0 +1,34 @@
+Need of linkedlist: 
+
+Problem with arrays : its size is fixed , why fix size is a pblm ->Unless we are sure that we going to store this (n) number of emls  then we can create array of that particular size but 
+if we dont know how many elms we are going to  store  during the runtime , then we cannot decide  the size of the array , and even if we take a random size it will either insufficient or may be excceess
+so here either we wasting memory or  making new array everytime.
+Created in stack and they are contingues  (elms next to eacher other ) act like a bench .If bench is of 5  capacity , only 5 people can sit on them and if less people sitting then rest of the space will be wasted . so we 
+dont want a fix sized bench as we dont know how many people gonna come and sit , it totally upto users . There comes a need where 
+we want a ds like whener a new person come , space will be given to him and when leave then that space will be deleted.
+Means need a type of ds that can grow and reduce in size during runtime ,a varible size ds.  
+ 
+So idea is -> to create a memory in heap during run time whenever prg reques memory and for that we need a pointer 
+to access that heap memmory so we make a pointer in stack and point to the memory location/address that created just now 
+ but this pointer point  only on one elm so if when created another memory in help, how we got that address .
+ so we add another space for stroing addressing in that meomry /node we created just now  to store the adddress of the next elm.
+ now it became a node where first block storing data stored on that memory address and second bloack store an address of next elm to make it a linear ds.
+ and for making it linear just like array.
+ Whenever required a memory , alocate a memory like a node and store data and address of next . like this we forming a 
+ chain where we linked all  of the nodes / memory allocayed and if ther is no next  node which  address we can store so we store null.
+ Now this is like whernever a new person come we bring a chair and eh sit on it and if leave then we remove the chair . so in this 
+ we are grwoing the space everytime a new person or new requirement for memory and every time he leavees we removing chair and 
+ we saving space no wastage of space so if meomry is not required we delete it  during runtime and space wont be wsted. 
+ -> all those nodes wont be side by side . so how the continuety will maintained 
+
+What is linked list : a collection of nodes each contain  data and pointer to next node.
+First/ HEad[ created in stack ] point to the first node[created in heap] of List.
+Arry contingues 201,202...
+But linked list : IIt uses links / addresses .
+Data : may be any type : int ,float 
+Pointer : its of own / node type.
+
+Node type : data(int type) and *pointer(Node type) { * means it stores address-> address of whom type (int / float )-> of node data type }
+
+
+

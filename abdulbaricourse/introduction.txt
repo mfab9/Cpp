@@ -1,0 +1,24 @@
+ds: the way of orgzng the data inside the main memory so program can efficitly utilise that data, that arragment is called ds.
+static memory allocation : 
+stack frame or activation record : when a fn runs all the variables will occupy the memory in stack in their activation record/stack frame.
+But how many memory does this new block take in stack and how many bites each varible would take in that block . was decided during the compile time ie before the exe.  
+And after the fn ends , their respective stack frame will be deleted from the stack on its own , we dont need to deaalocate those variable explicitly. 
+WHere as in dynamic Memory allocation.
+HEAP vs Stack :
+1. Heap is unorganised memmory.
+2. Its like a resource so once we have used the memory and when not required need to delete the memory.
+3. Program cannot access heap memory direclty , it access using pointer (pointer will be in stack)
+
+Heap. 
+Allocation : using new keyword or malloc.
+Program will access the pointer and then after getting the memorys address , it can go.
+Means heap memory should be explicitly requested and explicitly realesed , if not, then the memory still belonging to program and that memory cant be used again and thus cause loss of memory and leads to memory leak and at some point it heap memory bcome full , no space .
+
+Recurssion and stack.
+Once fn return / end , their respectove satck will be deleted and the control goes  back to the previous call
+Stack size : lats say fn call n times itself and then ends . so it create n+1 activation records in stack and each frame requires memory based on 
+number of varibale in fn so we say size of stack will be n+1 is O(n) space; 
+
+Static varibale in Recurssion.
+This wont be created when evern the fn call , will created only one ie when loading the program in code section .
+

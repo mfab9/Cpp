@@ -1,0 +1,23 @@
+Static vs dynamic array : size of the array is fixed or is dynamic (ie can be changed during the execution )
+Even though the memory will be allocated during the executin time in static also but size of that memory was decided at the compilation time.
+Dynamic : create in heap memory.
+using pointer , as its also a varible so its also get the memory inside the stack only. 
+Memory leask :if dont delete the memory ,  unuse memory  , if is not realesed then it causes memor leak.
+
+Why static not change its size:
+because the moemory allocated to array must be contigues(ie all elm stored next to each other in memory) , but there is no guarantee that the next consecutive memory loctions after the array are free or not or they ocupied by someother objects.
+As a result, the array size cannot grow dynamically at runtime.Instead, another larger array is created  and all the elms from originial array are copied into this one. The pointer is then updated to reference this new array.But Before this happens, the memory used by the original array is usually freed to avoid memory leaks.
+
+Array representation by compiler.
+array created in memory during the exe time so if during the comoilation if there is like a[2]=9 then where the compiler store this 9 , 
+it need a address , so it just create a formulae (b+i*w) where b will known during execution time .
+1D=Base + i * W
+Row major formulae; if A[m][n] then A[i][j] => B +[n*i + j] * W
+Colums => B + [m*i + j] * W
+
+nD Array :  
+
+Array adt : repr of data and operation on data .
+I have a array of size  of 10 but its not necessary ill use all 10 spaces. may or may not use all spaces.
+
+ 
